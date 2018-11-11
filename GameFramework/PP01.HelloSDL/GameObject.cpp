@@ -1,5 +1,4 @@
 #include "GameObject.h"
-#include "TextureManager.h"
 void GameObject::load(int x, int y, int width, int height,
 	std::string textureID)
 {

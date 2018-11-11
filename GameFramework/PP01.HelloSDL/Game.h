@@ -1,7 +1,8 @@
 #pragma once
-#include "SDL.h"
-#include "GameObject.h"
 #include "Player.h"
+#include "Enemy.h"
+#pragma once
+#include <vector>
 class Game
 {
 public:
@@ -14,14 +15,17 @@ public:
 	void handleEvents();
 	void clean();
 	bool running() { return m_bRunning; }
-
-	GameObject m_go;
-	Player m_player;
+	/*GameObject m_go;
+	Player m_player;*/
 private:
 	SDL_Window * m_pWindow;
 	SDL_Renderer* m_pRenderer;
 	bool m_bRunning;
 	int m_currentFrame;
+	std::vector<GameObject*> m_gameObjects;
+	GameObject* m_go;
+	GameObject* m_player;
+	GameObject* m_enemy;
 	//TextureManager m_textureManager;
 	//SDL_Texture* m_pTexture; // the new SDL_Texture variable
 	//SDL_Rect m_sourceRectangle; // 
