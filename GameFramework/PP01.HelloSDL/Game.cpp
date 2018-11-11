@@ -22,7 +22,6 @@ bool Game::init(const char* title, int xpos, int ypos,
 		m_destinationRectangle.w = m_sourceRectangle.w;
 		m_destinationRectangle.h = m_sourceRectangle.h;
 		SDL_SetRenderDrawColor(m_pRenderer, 255, 0, 0, 255);*/
-
 	}
 	else {
 		return false; // sdl could not initialize
