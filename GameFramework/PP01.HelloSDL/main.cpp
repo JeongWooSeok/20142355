@@ -1,7 +1,5 @@
 #include "Game.h"
-
 Game* g_game = 0; // our Game object
-
 int main(int argc, char* argv[])
 {
 	g_game = new Game();
