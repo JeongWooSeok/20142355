@@ -71,8 +71,8 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <IncludePath>C:\Users\JWS\Desktop\20142355\include;$(IncludePath)</IncludePath>
-    <LibraryPath>C:\Users\JWS\Desktop\20142355\lib\x86;$(LibraryPath)</LibraryPath>
+    <IncludePath>C:\Users\user\Desktop\20142355\include;C:\Users\JWS\Desktop\20142355\include;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\Users\JWS\Desktop\20142355\lib\x86;C:\Users\user\Desktop\20142355\lib\x86;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
