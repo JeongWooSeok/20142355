@@ -26,7 +26,7 @@ public:
 		{
 			s_pInstance = new Game();
 			return s_pInstance;
-		} 
+		}
 		return s_pInstance;
 	}
 
@@ -47,11 +47,11 @@ private:
 	SDL_Renderer* m_pRenderer; //플레이어 렌더러
 	SDL_Renderer* m_bRenderer; //백그라운드 렌더러
 
-	//GameObject* m_go;
-	//GameObject* m_player;
-	//GameObject* m_enemy;
-	//GameObject* m_monster1;
-	//GameObject* m_monster2;
+							   //GameObject* m_go;
+							   //GameObject* m_player;
+							   //GameObject* m_enemy;
+							   //GameObject* m_monster1;
+							   //GameObject* m_monster2;
 
 	bool m_bRunning;
 	//int m_currentFrame;
