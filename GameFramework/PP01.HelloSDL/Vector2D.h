@@ -52,7 +52,7 @@ private:
 
 	Vector2D operator/(float scalar)
 	{
-		return Vector2D(m_x/scalar, m_y/scalar);
+		return Vector2D(m_x / scalar, m_y / scalar);
 	}
 
 	Vector2D& operator/=(float scalar)

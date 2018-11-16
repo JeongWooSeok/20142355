@@ -1,10 +1,13 @@
 #include "Game.h"
+#include "InputHandler.h"
 
 const int FPS = 60;
 const int DELAY_TIME = 1000.0f / FPS;
 
 Uint32 frameStart, frameTime;
 
+Game* Game::s_pInstance = 0;
+InputHandler* InputHandler::s_pInstance = 0;
 
 int main(int argc, char* argv[])
 {

@@ -1,6 +1,5 @@
 #include "Game.h"
-
-Game* Game::s_pInstance = 0;
+#include "InputHandler.h"
 
 bool Game::init(const char*title, int xpos, int ypos,
 	int width, int height, bool fullscreen)
@@ -70,6 +69,24 @@ void Game::render()
 	SDL_RenderPresent(m_pRenderer);
 }
 
+void Game::handleEvents()
+{
+	TheInputHandler::Instance()->update();
+
+	SDL_Event event;
+	if (SDL_PollEvent(&event))
+	{
+		switch (event.type)
+		{
+		case SDL_QUIT:
+			m_bRunning = false;
+			break;
+		default:
+			break;
+		}
+	}
+}
+
 void Game::update()
 {
 	//m_currentFrame = int(((SDL_GetTicks() / 100) % 6));
@@ -83,25 +100,11 @@ void Game::update()
 
 void Game::clean()
 {
+	TheInputHandler::Instance()->clean();
+
 	std::cout << "cleaning game\n";
 	SDL_DestroyWindow(m_pWindow);
 	SDL_DestroyRenderer(m_pRenderer);
 
 	SDL_Quit();
-}
-
-void Game::handleEvents()
-{
-	SDL_Event event;
-	if (SDL_PollEvent(&event))
-	{
-		switch (event.type)
-		{
-		case SDL_QUIT:
-			m_bRunning = false;
-			break;
-		default:
-			break;
-		}
-	}
 }

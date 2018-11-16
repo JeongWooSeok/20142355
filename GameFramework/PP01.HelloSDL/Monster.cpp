@@ -11,11 +11,6 @@ void Monster::draw()
 
 void Monster::update()
 {
-	if (this->m_textureID == "mob1")
-		control(1.0f, 0.0f, int(((SDL_GetTicks() / 100) % 1)));
-	else if (this->m_textureID == "mob2")
-		control(2.0f, 0.0f, int(((SDL_GetTicks() / 20) % 1)));
-
 }
 
 void Monster::clean()
