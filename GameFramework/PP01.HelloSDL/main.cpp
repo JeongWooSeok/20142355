@@ -1,15 +1,20 @@
+/*
+	2018.11.08		
+	Kwon Kiseok
+	main.cpp
+*/
 #include "Game.h"
-#include "InputHandler.h"
+#include <iostream>
+
+Game* Game::s_pInstance = 0;
+TheInputHandler* TheInputHandler::s_pInstance = 0;
 
 const int FPS = 60;
 const int DELAY_TIME = 1000.0f / FPS;
 
 Uint32 frameStart, frameTime;
 
-Game* Game::s_pInstance = 0;
-InputHandler* InputHandler::s_pInstance = 0;
-
-int main(int argc, char* argv[])
+int main(int argc, char* args[])
 {
 	std::cout << "game init attempt...\n";
 	if (TheGame::Instance()->init("Chapter 1", 100, 100, 640, 480, false))
@@ -29,11 +34,17 @@ int main(int argc, char* argv[])
 			}
 		}
 	}
-	else {
+	else
+	{
 		std::cout << "game init failure - " << SDL_GetError() << "\n";
 		return -1;
 	}
 	std::cout << "game closing...\n";
-	TheGame::Instance()->clean();
+	TheGame::Instance()->quit();
 	return 0;
 }
+
+/*
+	이론
+	dll 동적 라이브러리 , 정적 라이브러리 설명 , 차이점 , 왜 필요한지 , dll 파일 찾는 순서
+*/

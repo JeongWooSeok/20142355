@@ -1,7 +1,7 @@
 #pragma once
 #include <SDL.h>
-#include "TextureManager.h"
 #include "LoaderParams.h"
+#include "TextureManager.h"
 
 class GameObject
 {
