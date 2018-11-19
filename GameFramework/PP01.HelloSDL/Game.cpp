@@ -27,6 +27,14 @@ bool Game::init(const char*title, int xpos, int ypos,
 		{
 			return false;
 		}
+		if (!TheTextureManager::Instance()->load("Assets/simhyang.png", "mob1", m_pRenderer))
+		{
+			return false;
+		}
+		if (!TheTextureManager::Instance()->load("Assets/red.png", "mob2", m_pRenderer))
+		{
+			return false;
+		}
 
 		/*m_go = new GameObject();
 		m_player = new Player();
