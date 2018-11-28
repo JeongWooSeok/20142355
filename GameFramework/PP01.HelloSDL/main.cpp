@@ -1,3 +1,8 @@
+/*
+	2018.11.08		
+	Kwon Kiseok
+	main.cpp
+*/
 #include "Game.h"
 #include <iostream>
 
@@ -40,3 +45,8 @@ int main(int argc, char* args[])
 	TheGame::Instance()->quit();
 	return 0;
 }
+
+/*
+	이론
+	dll 동적 라이브러리 , 정적 라이브러리 설명 , 차이점 , 왜 필요한지 , dll 파일 찾는 순서
+*/

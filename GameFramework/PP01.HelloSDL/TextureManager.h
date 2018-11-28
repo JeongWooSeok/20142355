@@ -1,3 +1,11 @@
+/*
+	2018.11.09
+	Kwon Kiseok
+	TextureManager.h
+	하나의 종족을 위한 이미지 파일은 중앙의 한 곳에서 관리
+	각각의 캐릭터 객체는 중앙 매니저를 통해 데이터 공유하기 쉬움
+*/
+
 #pragma once
 #include <map>
 #include <SDL_image.h>
